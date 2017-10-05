@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+
+	<script>
+    	function displayFormData(){
+			document.getElementById('demo').innerHTML=document.getElementById('firstname').value;
+			document.getElementById('demo2').innerHTML=document.getElementById('lastname').value;
+			}
+    </script>
+</head>
+
+<body>
+	<form>
+    	<label for="firstname">First name: </label>
+        <input type="text" name="fullname" id="firstname">
+        <label for="lastname">Last name: </label>
+        <input type="text" name="lastname" id="lastname">
+        
+        
+    </form>
+    	<input type="submit" value="Submit" onClick="displayFormData()"><br>
+        Firstname: <p id="demo"></p>
+        Lastname: <p id="demo2"></p>
+</body>
+</html>

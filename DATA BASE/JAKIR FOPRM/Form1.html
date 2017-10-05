@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+<script>
+var win;
+function openWindow(){
+	win = window.open("","","width=500, height=600");
+	win.document.write("<h2>Output Window</h2>");
+	}
+function closeWindow(){
+	win.close();
+	}
+function add(){
+	with(document){
+	
+	var x1=getElementById("name").value;	
+		if(x1.length==0 || x1.length>15){
+			alert("you must be 1 to 15 character.");
+			return;	
+			}
+			
+			
+	//for email		
+	var x2=getElementById("email").value;	
+	var i=x2.indexOf('@');
+	var j=x2.lastIndexOf('.');
+		if(i>0 && i<j-1){
+			alert("Valid email");
+			}else{
+			alert("Invalid email");
+			return;	
+				}
+	//for password
+	var x3=getElementById("pword").value;				
+		if(x3.length<=5){
+		alert("you must be less 5 character");
+			return;
+			}
+			
+	//for hobby
+	var x4="";	
+	if(getElementById("reading").checked==true)
+	x4+="Read";	
+	
+	if(getElementById("writing").checked==true)
+	x4+="Write";	
+	
+	if(getElementById("playing").checked==true)
+	x4+="Play";
+	
+	//for gender		
+	var x5=document.getElementById("gender").value;
+	//for country
+	var x5=document.getElementById("country").value;				
+				
+		
+	win.document.write("your name is: "+x1+"<br/>");
+	win.document.write("your email is: "+x2+"<br/>");
+	win.document.write("your password is: "+x3+"<br/>");
+	win.document.write("your hobby is: "+x4+"<br/>");
+	win.document.write("your gender is: "+x5+"<br/>");
+	win.document.write("your country is: "+x6+"<br/>");
+		}
+	}
+</script>
+
+<body>
+<form name="myForm">
+    <pre>
+        Name   : <input type="text" id="name"><P>
+       email   : <input type="text" id="email"><P>
+    password   : <input type="password" id="pword"><P>
+    Hobby      : 
+                <input type="checkbox" id="reading">Reading
+                <input type="checkbox" id="writing">Writing
+                 <input type="checkbox" id="playing">palying<P>
+        
+    Gender:
+    		<input type="radio" id="gender" value="male">Male
+            <input type="radio" id="gender" value="female">Female<P>
+            
+    Country:
+    
+            <select id="country">
+                <option id="bangladesh">Bangladesh</option>
+                <option id="pakistan">Pakistan</option>
+                <option id="nepal">Nepel</option>
+                <option id="iran">Iran</option>
+            </select>
+            
+
+</pre>
+</form>
+<button onClick="openWindow()">open window</button>
+<button onClick="write">write</button>
+<button onClick="add()">Add</button>
+<button onClick="closeWindow()">close window</button>
+
+
+
+</body>
+</html>

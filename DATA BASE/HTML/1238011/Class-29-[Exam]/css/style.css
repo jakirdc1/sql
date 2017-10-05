@@ -1,0 +1,119 @@
+.container{
+	width:1200px;
+	height:auto;
+	margin:0 auto;
+	border:1px solid #000;
+	}
+	
+h1{
+	text-align:center;
+	color:#F00;
+	font-size:36px;
+	}
+.header{
+	width:1200px;
+	height:100px;
+	background:#666;
+	}
+	.hl{
+		width:100px;
+		height:100px;
+		float:left;
+		}
+	.hr{
+		width:1100px;
+		height:100px;
+		float:left;
+		}
+.navarea{
+	margin-top:2px;
+	height:30px;
+	widows:1300px;
+	background:#ddd;
+	}
+nav ul li{
+	list-style:none;
+	display:inline;
+	font-size:24px;
+	padding-right:5px;
+	}
+nav ul li a{
+	text-decoration:none;
+	background:#CCC;
+	border-radius:2px;
+	}
+nav ul li a:hover{
+	background:#C9F;
+	}
+/* bodyarea */	
+.bodyarea{
+	margin-top:2px;
+	height:500px;
+	widows:1200px;
+	}
+	.bdl{
+		width:120px;
+		height:500px;
+		background:#ddd;
+		float:left;
+		}
+	.bdr{
+		width:1080px;
+		height:500px;
+		float:left;
+		}
+		/*CSS for Contact Form*/
+		
+		.row{
+			width:500px;
+			margin:0 auto;
+			}
+			.rrow{
+				float:right;
+				width:300px;
+				}
+			.lrow{
+				float:left;
+				width:200px;
+				}
+/* morething */
+.morething{
+	margin-top:2px;
+	height:250px;
+	widows:1300px;
+	background:#ddd;
+	}
+	.morl{
+		width:400px;
+		height:250px;
+		margin-left:2px;
+		float:left;
+		background:#333;
+		}
+	.mormid {
+		width: 400px;
+		height: 250px;
+		margin-left: 2px;
+		float: left;
+		background: #333;
+		margin-right: 2PX;
+		}
+	.morr{
+		width:392px;
+		height:250px;
+		float:left;
+		background:#333;
+		margin-right: 2PX;
+		}
+/* footer */
+.footer {
+	margin-top: 2px;
+	height: 50px;
+	widows: 1300px;
+	background: #ddd;
+}
+
+.footer p {
+	text-align: center;
+	padding-top: 14px;
+}

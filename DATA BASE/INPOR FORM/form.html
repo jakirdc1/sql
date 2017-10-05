@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+
+	<script>
+		function add(){
+			with(document){
+		//for name
+		var stname=getElementById("stname").value;
+		if(stname.length==0 || stname.length>10){
+			alert("name must be 1 to 10 character");
+			return;
+			}
+		//for email
+		var email=getElementById("email").value;
+		var i=email.indexOf('@');
+		var j=email.lastIndexOf('.');
+		if(i>0 && i<j-1){
+			alert("valid Email");
+			}else{
+			alert("Invalid email");	
+			return;
+				}
+		//for password
+		var pword=getElementById("Pword").value;
+		if(Pword.length<=5){
+			alert("password must be less 5 character");
+			return;
+			}
+		//for hobby
+		var hobby="";
+		if(getElementById("Read").checked==true)
+		hobby+="read";
+		if(getElementById("Write").checked==true)
+		hobby+="Write";
+		if(getElementById("Playing").checked==true)
+		hobby+="Playing";
+		
+		//for Division
+		var division=getElementById("division").value;
+		//for course
+		var Course="";
+		if(getElementById("c#").checked==true)
+		course+="c#";
+		if(getElementById("java").checked==true)
+		course+="JAVA";
+		if(getElementById("wpsi").checked==true)
+		course+="WPSI";
+		win.document.write(stname+" "+email+" "+hobby+" "+Course+" "+division);
+		
+				}
+			}
+		var win;
+			function winOpen(){
+				win =window.open("", "", "width=500 height=300");
+				win.document.write("<center> window output</center>");
+			}
+			
+			function winClose(){
+				win.close();
+			}
+    
+    </script>
+</head>
+<body>
+
+
+<form name="f">
+<pre>
+Name     : <input type="text" id="stname"/><br/>
+
+E-mail   : <input type="text" id="email" id="email"/>
+
+Password : <input type="Password" id="Pword"/>
+
+Hobby :
+     Read<input type="checkbox" id="Read" value="Read"/>
+    
+     Write<input type="checkbox" id="Write" value="Write"/>
+    
+     Playing<input type="checkbox" id="Playing" value="Playing"/>
+    
+Division :
+
+		<select id="division">
+          <option value="Dhaka">Dhaka</option>
+          <option value="Rajshahi">Rajshahi</option>
+          <option value="Khulna">Khulna</option>
+          <option value="Bogra">Bogra</option>
+          <option value="Sylhet">Sylhet</option>
+          <option value="Rangpur">Rangpur</option>
+          <option value="Chitagong">Chitagong</option>
+        
+        </select>
+Course :
+
+
+	<input type="radio" name="Course" id="c#" value="c#"/>c#
+        
+        <input type="radio" name="Course" id="java" value="java"/>JAVA
+        
+       	<input type="radio" name="Course" id="wpsi" value="wpsi"/>WPSI
+        </pre>
+        </form>
+<!----<textarea id="dis" rows="20" cols="20"></textarea>---> 
+
+
+<input type="button" value="open" onClick="winOpen()"/><input name="button2" type="button" value="write"/><input name="button" type="button" value="Add" onClick="add()"/><input type="button" value="close" onClick="winClose()"/>       
+
+
+</code>
+
+
+</body>
+</html>

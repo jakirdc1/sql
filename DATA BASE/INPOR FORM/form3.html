@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+</head>
+<script>
+var Jakir;
+function openWindow(){
+	Jakir = window.open("","","width=300");
+	Jakir.document.write("<h2><center>Form Output</center></h2>");
+	}
+function closeWindow(){
+	Jakir.close();
+	}
+function add(){
+	var x1=document.myForm.name.value;
+	
+	
+	Jakir.document.write("Your name is: "+x1);
+	}
+
+</script>
+
+<body>
+<form name="myForm">
+Name:
+ <input type="text" id="name"><br/>
+ 
+</form>
+<button onClick="openWindow()">Open window</button>
+<button onClick="add()">Add</button>
+<button onClick="closeWindow()">Close Window</button>
+
+
+
+
+</body>
+</html>

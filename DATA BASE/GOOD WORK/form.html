@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Form</title>
+<script> 
+var win;
+function openWindow(){
+	win=window.open("", "", "width=500");
+	win.document.write("<h2>output Window<h2>");
+	}
+
+
+function closeWindow(){
+	win.close();
+	}
+	
+	
+
+function add(){
+	with(document){
+		
+var x1=getElementById("name").value;		
+	if(x1.length==0 || x1.length>15){
+	alert("name must be 1 to 15 character.");	
+		}	
+		
+		
+var x2=getElementById("number").value;
+
+	
+
+var x3=getElementById("email").value;
+
+var i=x3.indexOf('@');	
+var j=x3.lastIndexOf('.');	
+if(i>0 && i<j-1){
+	alert("valid is email");
+	
+	}else{
+		
+	alert("Invalid is email");
+	return;		
+		}
+
+var x4=getElementById("Pword").value;
+if(x4.length<=5){
+	alert("name must be greter than 5 character.");
+	return;	
+		}	
+		
+		
+var x5="";
+
+if(getElementById("reading").checked)	
+x5+="Read";
+
+if(getElementById("writing").checked)	
+x5+="Write";
+
+if(getElementById("playing").checked)	
+x5+="Play";
+
+
+var x6=getElementById("gender").value;
+
+var x7=getElementById("country").value;
+
+
+
+
+win.document.write("Your name is: "+x1+"<br/>");
+win.document.write("Your id is: "+x2+"<br/>");
+win.document.write("Your Email is: "+x3+"<br/>");
+win.document.write("Your password is: "+x4+"<br/>");
+win.document.write("Your hobby is: "+x5+"<br/>");
+win.document.write("Your gender is: "+x6+"<br/>");	
+win.document.write("Your country is: "+x7+"<br/>");	
+		}
+	
+	}
+
+
+
+
+</script>
+
+</head>
+
+<body>
+<form id="myForm">
+<pre>
+Name:
+<input type="text" id="name"><br/>
+
+Id:
+<input type="text" id="number"><br/>
+
+Email:
+<input type="text" id="email"><br/>
+
+Password:
+<input type="password" id="Pword"><br/>
+
+Hobby:
+<input type="checkbox" id="reading">Read
+<input type="checkbox" id="writing">Write
+<input type="checkbox" id="playing">Play<br/>
+
+Gender:
+<input type="radio" id="gender" value="male">Male
+<input type="radio" id="gender" value="female">Female
+
+Country:
+<select id="country">
+<option id="Bangladesh">Bangladesh</option>
+<option id="Nepal">Nepal</option>
+<option id="Pakistan">Pakistan</option>
+
+
+</select>
+
+
+</pre>
+
+</form>
+
+<button onClick="openWindow()">openWindow</button>
+<button onClick="add()">Add</button>
+<button onClick="closeWindow()">close Window</button>
+</body>
+</html>

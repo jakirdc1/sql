@@ -1,0 +1,43 @@
+
+
+#container{
+	width:650px;
+	height:480px;
+	background:#C3F;
+	margin:0 auto;
+	
+	}
+#header{
+	width:100%;
+	height:100px;
+	background:#0FC;
+	
+	
+	}
+#content{
+	width:100%;
+	height:300px;
+	background:#3F9;
+	
+	
+	}
+#leftcontent{
+	width:30%;
+	height:300px;
+	background:#F0F;
+	float:left;
+	
+	}
+#rightcontent{
+	width:70%;
+	height:300px;
+	background:#9F0;
+	float:left;
+	
+	}
+#footer{
+	width:100%;
+	height:80px;
+	background:#F00;
+	float:left;
+	}

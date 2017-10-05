@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Form</title>
+</head>
+<script>
+var win;
+function openWindow(){
+	win=window.open("","","width=500 height=600");
+	win.document.write("<h2>Output Window</h2>")
+	}
+function closeWindow(){
+	win.close();
+	}
+function add(){
+	with(document){
+	//for name
+	
+	var x1=getElementById("name").value;
+	if(x1.length==0||x1.length>15){
+		alert("name is must be 1 to 15 character");
+		return;
+		}
+	var x2=getElementById("email").value;	
+		var i=x2.indexOf('@');
+		var j=x2.lastIndexOf('.');
+		if(i>0 && i<j-1){
+		alert("Valid email");	
+			}else{
+			alert("Invalid email");	
+				}
+	var x3=getElementById("pword").value;
+	if(x3.length<=5){
+		alert("password is must be les 5 character");
+		return;
+		}
+	var x4="";
+	if(getElementById("reading").checked==true)
+	x4+="Read";
+	
+	var x4="";
+	if(getElementById("writing").checked==true)
+	x4+="Write";
+	
+	var x4="";
+	if(getElementById("playing").checked==true)
+	x4+="Play";	
+	
+	var x5=document.getElementById("gender").value;
+	
+	var x6=document.getElementById("country").value;
+		
+		
+   win.document.write("your name is: "+x1+"<br/>");
+   win.document.write("your email is: "+x2+"<br/>");
+   win.document.write("your password is: "+x3+"<br/>");
+   win.document.write("your hobby is: "+x4+"<br/>");
+    
+    win.document.write("your gender is: "+x5+"<br/>");
+	win.document.write("your country is: "+x6+"<br/>");					
+		}
+	
+	} 
+</script>
+
+<body>
+ <form id="myForm">
+ <pre>
+ 	Name    :<input type="text" id="name"><p>
+    
+   email    :<input type="text" id="email"><p>
+   
+password    :<input type="password" id="pword"><p>
+
+Hobby       :<input type="checkbox" id="reading">Read
+			 <input type="checkbox" id="writing">Write
+             <input type="checkbox" id="playing">Play<p>
+ 
+Gender      :<input type="radio" id="gender" value="male">Male
+			 <input type="radio" id="gender" value="female">Female
+             
+ Country    :
+ 			<select id="country">
+            	<option id="bangladesh">Bangladesh</option>
+                <option id="pakistan">Pakistan</option>
+                <option id="india">India</option>
+            </select>            
+ </pre>
+ </form> 
+ 
+  
+ <button onClick="openWindow()">Open window</button>
+ <button onClick="add()">Add</button>
+ <button onClick="closeWindow()">Close window</button>
+
+</body>
+</html>

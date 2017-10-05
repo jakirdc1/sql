@@ -1,0 +1,38 @@
+PART-1: cREATE TABLE
+CREATE TABLE student (
+  USER_ID       NUMBER (5)    NOT NULL,
+  USERNAME      VARCHAR2 (20)  NOT NULL,
+  PRIMARY KEY ( USER_ID )
+ )
+ 
+PART-2: cREATE procedure
+
+CREATE OR REPLACE PROCEDURE getStudentByUserId(
+	   p_userid IN STUDENT.USER_ID%TYPE,
+	   p_username OUT STUDENT.USERNAME%TYPE)
+	  
+IS
+BEGIN
+
+  SELECT USERNAME 
+  INTO p_username
+  from  STUDENT WHERE USER_ID = p_userid;
+
+END;
+
+
+PART-3: Insert data 
+..............
+
+
+PART-4: Call Procedure to retrieve data 
+DECLARE
+   p_username STUDENT.USERNAME%TYPE;
+  
+BEGIN
+
+   getStudentByUserId(1,p_username);
+
+   DBMS_OUTPUT.PUT_LINE('username :  ' || p_username);
+  
+END;

@@ -1,0 +1,38 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	width: 700px;
+	margin:0 auto;
+	}
+table{
+	background:#F96;
+	
+	}
+th,td{
+	border:1px solid green;
+	text-align:center;
+	}
+#a{
+	background:red;
+	}
+#b{
+	background:green;
+	}
+#c{
+	background:black;
+	}
+#d{
+	background:wheat;
+	}
+#e{
+	background:purple;
+	}
+#f{
+	background:pink;
+	}
+#i{
+	background:skyblue;
+	}
+#k{
+	background:blue;
+	}

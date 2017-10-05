@@ -1,0 +1,48 @@
+@charset "utf-8";
+/*Md. Shamim Sarker*/
+#container{
+	width: 650px;
+	height:480px;
+	background:#063;
+	margin: 0 auto;
+	}
+#header{
+	width: 100%;
+	height:20%;
+	background:#939B97;
+	}
+#content{
+	width: 100%;
+	height:60%;
+	background:#993;
+	
+	}
+#leftcontent{
+	width: 20%;
+	height:100%;
+	background:#808787;
+	float: left;
+	}
+#rightcontent{
+	width: 80%;
+	height:100%;
+	background:#9C9C90;
+	float: left;
+	}
+.leftdiv{
+	width: 40%;
+	float:left;
+	}
+.rightdiv{
+	width: 60%;
+	float:left;
+	}
+#button{
+	width: 60%;
+	float:right;
+	}
+#footer{
+	width: 100%;
+	height:20%;
+	background:#8F9994;
+	}

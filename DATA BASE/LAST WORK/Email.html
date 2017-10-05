@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Email</title>
+<script>
+var win;
+function openWindow(){
+
+win=window.open("", "", "width=500");	
+	
+win.document.write("<h1>Output Window<h1>");
+	}
+
+function add(){
+	
+	with(document){
+		
+var x1=getElementById("emiled").value;
+
+var i=x1.indexOf('@');
+var j=x1.lastIndexOf('.');	
+
+if(i>0 && i<j-1){
+	alert("valid email");
+	
+	}else{
+		
+	alert("Invalid email");	
+	return;
+		}
+		
+		
+		
+win.document.write("Your email is: "+x1+"<br/>");			
+		}
+	
+	}
+
+
+</script>
+
+</head>
+
+<body>
+<form>
+Email:
+<input type="text" id="emiled">
+
+
+</form>
+<button onClick="openWindow()">open window</button>
+<button onClick="add()">Add</button>
+</body>
+</html>

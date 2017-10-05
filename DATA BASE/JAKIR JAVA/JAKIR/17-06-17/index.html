@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<link rel="stylesheet" href="css/style.css"/>
+<script type="text/javascript" src="jquery.min.js"></script>
+</head>
+<body>
+<h1>JavaScript Array page 39</h1>
+
+
+<p id="demo"></p>
+<p id="demo2"></p>
+<p id="demoIndexValue"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<p id="demo5"></p>
+Array values form testArray: <p id="testArray"></p>
+
+
+
+
+
+
+<script>
+var cars=["Saab", "Volvo", "BMW"]
+document.getElementById("demo").innerHTML=cars;
+
+
+document.getElementById("demo2").innerHTML=cars[2];
+
+document.getElementById("demoIndexValue").innerHTML=cars[2];
+
+document.getElementById("demo3").innerHTML=cars[1];
+
+document.getElementById("demo4").innerHTML=cars[0];
+
+document.getElementById("demo5").innerHTML=cars.length;
+
+
+var testArray=new Array(0)
+testArray[0]=10;
+testArray[1]=20;
+testArray[2]=30;
+document.getElementById("testArray").innerHTML=testArray[0];
+
+
+var trees=new Array("Elm","Pine","Oak")
+var biggerBush=trees.concat("Maple", "Sycamore")
+
+var bigBush=trees.join('|');
+document.write(bigBush);
+alert(bigBush);
+
+</script>
+
+</body>
+</html>

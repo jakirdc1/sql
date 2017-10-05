@@ -1,0 +1,16 @@
+@charset "utf-8";
+/* CSS Document */
+table{
+	background:#9CF;
+    }
+	td{
+		border:1px solid green;
+		color:red;
+	}
+
+
+.tit{
+	
+	color:green;
+	
+	}

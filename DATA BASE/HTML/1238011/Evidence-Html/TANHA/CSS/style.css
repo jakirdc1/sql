@@ -1,0 +1,116 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* CSS container */
+
+#container{
+	width:80%;
+	height:auto;
+	margin:0 auto;
+	background:#96F;
+	}
+/* CSS container */
+
+/* CSS header */
+.header-left{
+	width:20%;
+	height:100px;
+	float:left;
+	background:#C9F;
+	}
+.header-right{
+	width:80%;
+	height:100px;
+	float:left;
+	background:#CCF;
+	text-align:center;
+	}
+/* CSS header end*/
+
+/* CSS full */
+.full-column{
+	width:100%;
+	height:100px;
+	float:left;
+	background:#FCF;
+	text-align:center;
+	}
+.full-column>a{
+	color:#CC0;
+	text-decoration:none;
+	padding:0px 15px;	
+	}
+.full-column>a:hover{
+	color:#3FF;
+	text-decoration:none;
+	padding:0px 15px;
+	border-bottom:4px solid #630;	
+	}
+/* CSS full  end */
+
+/* CSS content */
+	
+.content-left{
+	width:30%;
+	height:400px;
+	float:left;
+	background:#9FF;
+	}
+.content-right{
+	width:70%;
+	height:400px;
+	float:left;
+	background:#CF6;
+	text-align:center;
+		}
+.full-column1{
+	width:100%;
+	height:50px;
+	float:left;
+	background:#CF6;
+	text-align:center;
+	
+		}		
+		
+/* CSS content end */
+
+/* CSS column  */
+.column1{
+	width:33.33%;
+	height:200px;
+	float:left;
+	background:#FF0;
+	}
+.column2{
+	width:33.33%;
+	height:200px;
+	float:left;
+	background:#633;
+	}
+.column3{
+	width:33.33%;
+	height:200px;
+	float:left;
+	background:#9F6;
+	}
+/* CSS column end   */
+
+/* CSS footer */
+.full-footer{
+	width:100%;
+	height:100px;
+	float:left;
+	background:#FCF;
+	text-align:center;
+	}
+/* CSS footer end  */
+.form-left{
+	width:29%;
+	float:left;
+	padding-left:1%;
+	}
+.form-right{
+	width:69%;
+	float:left;
+	padding-left:1%;
+	}

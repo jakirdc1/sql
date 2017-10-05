@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Form</title>
+<script>
+var win;
+function OpenWindow(){
+win=window.open("", "", "width=500" );	
+
+win.document.write("<h1>outpur window<h1>");	
+	}
+	
+function closeWindow(){
+	win.close();
+	
+	}
+
+function add(){
+	
+	with(document){
+		
+
+var x1=getElementById("name").value;
+ 
+
+var x2=getElementById("number").value;
+
+var x3=getElementById("phonenumber").value;
+
+var x4=getElementById("Pword").value;
+	
+		
+var x5="";		
+	if(getElementById("reading").checked)
+	x5+="Read";
+	
+	if(getElementById("writing").checked)
+	x5+="Write";
+	
+	if(getElementById("playing").checked)
+	x5+="Play";
+	
+var x6=myForm.gender.value;
+
+var x7=getElementById("country").value;
+	
+
+win.document.write("your name is: "+x1+"<br/>");
+win.document.write("your id is: "+x2+"<br/>");	
+win.document.write("your phone number is: "+x3+"<br/>");	
+win.document.write("your pasword is: "+x4+"<br/>");	
+win.document.write("your hobby is: "+x5+"<br/>");	
+win.document.write("your gender is: "+x6+"<br/>");	
+win.document.write("your country is: "+x7+"<br/>");			
+		}
+	}
+	
+
+</script>
+</head>
+<form id="myForm">
+<pre>
+Name:
+<input type="text" id="name"><br/>
+
+Id:
+<input type="text" id="number"><br/>
+
+phone:
+<input type="text" id="phonenumber"><br/>
+password:
+<input type="password" id="Pword"><br/>
+Hobby:
+<input type="checkbox" id="reading">Read
+<input type="checkbox" id="writing">Write
+<input type="checkbox" id="playing">Play<br/>
+
+Gender:
+
+<input type="radio" name="gender" value="male">Male
+<input type="radio" name="gender" value="female">Female<br/>
+
+
+Country:
+<select id="country">
+<option value="Bangladesh">Bangladesh</option>
+<option value="Pakistan">Pakistan</option>
+<option value="Nepal">Nepal</option>
+
+</select>
+
+</pre>
+
+
+</form>
+<button onClick="OpenWindow()">open window</button>
+
+<button onClick="add()">Add</button>
+
+<button onClick="closeWindow()">close window</button>
+
+
+<body>
+</body>
+</html>

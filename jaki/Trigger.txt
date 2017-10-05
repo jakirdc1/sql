@@ -1,0 +1,25 @@
+create table usa(
+	usaId number primary key,
+	fName varchar2(20),
+	lName varchar2(20)
+);
+
+create table usa_backup(
+	usaId number primary key,
+	fName varchar2(20),
+	lName varchar2(20)
+);
+
+create or replace trigger usa_after_insert
+after insert on usa
+for each row
+declare
+begin
+	insert into usa_backup
+	values(:new.usaId, :new.fName, :new.lName);
+	dbms_output.put_line('Record inserted on table usa');
+end;
+/
+
+insert into usa
+values(102, 'Harry', 'jhonson');

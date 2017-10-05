@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Untitled Document</title>
+
+	<script>
+        function displayFormData(){
+            var fname = document.forms["myform"]["fname"].value;
+            var lname = document.forms["myform"]["lname"].value;
+            var fullname = fname +" "+ lname;
+            document.getElementById("showresult").innerHTML = fullname;
+
+            var gender = document.forms["myform"]["gender"].value;
+			document.getElementById("showGender").innerHTML = gender;
+			
+			var hobbies = document.getElementsByName('hobby');
+			var hobby = "";
+			for(var i=0;i<hobbies.length;i++){
+				if(hobbies[i].checked){
+					hobby=hobby+hobbies[i].value+", ";
+				}
+			}
+			document.getElementById("showCheck").innerHTML = hobby;
+			
+            //var country = document.forms["myform"]["country"].value;
+			
+			var countries = document.getElementById('country');
+			var country = "";
+			for(var i=0;i<countries.length;i++){
+				if(countries[i].selected){
+					country=country+countries[i].value+", ";
+				}
+			}
+			document.getElementById("showCountry").innerHTML = country;
+
+        }
+
+    </script>
+</head>
+
+<body>
+ 
+<form id="myform">
+	<input type="text" name="fname" id="fname">
+	<input type="text" name="lname" id="lname">
+	<input type="radio" name="gender" value="male" id="male"><label for="male">Male</label>
+	<input type="radio" name="gender" value="female" id="female"><label for="female">Female</label>
+    
+    
+    <input type="checkbox" name="hobby" value="read" id="read"><label for="read">Read</label>
+    <input type="checkbox" name="hobby" value="write" id="write"><label for="write">Write</label>
+    <input type="checkbox" name="hobby" value="walk" id="walk"><label for="walk">Walk</label>
+    
+    <select id="country" name="country" multiple>
+    	<option value="bd">Bangladesh</option>
+        <option value="ind">India</option>
+    	<option value="ca">Canada</option>
+    </select>
+    
+    <button type="button" onClick="displayFormData();">Send</button>
+</form>
+
+<div id="showresult"></div>
+<div id="showGender"></div>
+<div id="showCheck"></div>
+<div id="showCountry"></div>
+
+</body>
+</html>

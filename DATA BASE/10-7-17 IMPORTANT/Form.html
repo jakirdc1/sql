@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <title>Form</title>
+    <script>
+    var win;
+		function winOpen(){
+			win=window.open("","","width=500 height=200");
+			win.document.write("<center> window output</center>");
+			
+			}
+    function winClose(){
+		win.close();
+		}
+    </script>
+    
+    </head>
+
+    <body>
+    <form name="f">
+        <pre>
+           Name :      <input type="text" id="stnme"/><br>
+            
+            
+           e-mail:     <input type="text" id="email"/>
+            
+           Password :  <input type="password" id="pword"/>
+            
+        
+           Hobby :
+               Read<input type="checkbox" id="Read" value="Read"/>
+               Write<input type="checkbox" id="Write" value="Write"/>
+               Dance<input type="checkbox" id="Dance" value="Dance"/>
+               
+               
+           Division:<select id="division">
+                         <option value="Dhaka">Dhaka</option>
+                         <option value="Khulna">Khulna</option>
+                         <option value="Chittagong">Chittagong</option>
+                         <option value="Rajshahi">Rajshahi</option>
+                         <option value="Bogra">Bogra</option>
+                         <option value="Rangpur">Rangpur</option>
+                         <option value="Sylhet">Sylhet</option>
+         
+                  </select>
+              
+          Course:
+           <input type="radio" name="Course" id="c#" value="c#"/>c#  
+           
+           <input type="radio" name="Course" id="java" value="java"/>Java
+           
+           <input type="radio" name="Course" id="wpsi" value="wpsi"/>WPSI
+           
+           
+       <!---<textarea id="dis" rows="20" cols="20"></textarea><!---->
+           
+<input type="button" value="open" onClick="winOpen()"/><input name="button2" type="button" value="write"/><input name="button" type="button" value="Add" onClick="add()"/><input type="button" value="close" onClick="winClose()"/>
+        </pre>
+    
+    
+    </form>
+    
+    
+    
+    </body>
+</html>

@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Factorial</title>
+</head>
+
+<body>
+	<h2 id="demo"></h2>
+	<script>
+    	function getFactorial(x){
+			var fact = 1;
+			for(x; x>=1; x--){
+				fact *= x;
+				}
+				return fact;
+			}
+		var p = prompt("Please Enter a number","");
+		document.getElementById("demo").innerHTML="The factorial of the given series is "+getFactorial(p);
+    </script>
+</body>
+</html>

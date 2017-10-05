@@ -1,0 +1,154 @@
+@charset "utf-8";
+/* CSS Document */
+#container{
+	width:700px;
+	height:550px;
+	background:#CCF;
+	margin:0 auto;
+	}
+#header{
+	width:700px;
+	height:100px;
+	background:#666;
+	}
+#content{
+	width:700px;
+	height:450px;
+	background:#0F3;
+	}
+#leftcontent{
+	width:100px;
+	height:450px;
+	background:#FFC;
+	float:left;
+	}
+#rightcontent{
+	width:600px;
+	height:450px;
+	background:#0C9;
+	float:left;
+	}
+.row{
+	width:100%;
+	
+	}
+.leftrow{
+	width:30%;
+	
+	background:#CCC;
+	float:left;
+	
+	}	
+	
+.rightrow{
+	width:70%;
+	
+	background:#333;
+	float:left;
+	
+	}
+.row{
+	width:100%;
+	
+	
+	}
+.leftrow1{
+	width:30%;
+	
+	background:#CCC;
+	float:left;
+	
+	}	
+	
+.rightrow1{
+	width:70%;
+	
+	background: #CCF;
+	float:left;
+	
+	}	
+.row{
+	width:100%;
+	
+	
+	}
+.leftrow2{
+	width:30%;
+	
+	background:#CCC;
+	float:left;
+	
+	}	
+	
+.rightrow2{
+	width:70%;
+	
+	background:#93C;
+	float:left;
+	
+	}
+.row{
+	width:100%;
+	
+	
+	}
+.leftrow3{
+	width:30%;
+	
+	background:#6F3;
+	float:left;
+	
+	}	
+	
+.rightrow3{
+	width:70%;
+	
+	background:#FCC;
+	float:left;
+	
+	}	
+.row{
+	width:100%;
+	
+	
+	}
+.leftrow4{
+	width:30%;
+	
+	background:#963;
+	float:left;
+	
+	}	
+	
+.rightrow4{
+	width:70%;
+	
+	background:#C30;
+	float:left;
+	
+	}	
+.row{
+	width:100%;
+	
+	
+	}
+.leftrow5{
+	width:30%;
+	
+	background:#F3F;
+	float:left;
+	
+	}	
+	
+.rightrow5{
+	width:70%;
+	
+	background:#06F;
+	float:left;
+	
+	}
+#footer{
+	width:700px;
+	height:100px;
+	background:#666;
+	}	

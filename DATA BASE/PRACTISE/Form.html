@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>FORM</title>
+<script>
+var win;
+function openWindow(){
+	win=window.open("","", "width=500 height=400");
+	win.document.write("<center><h2>Output Window<h2><center>");
+	}
+	
+	
+function closeWindow(){
+	
+	win.close();
+	}
+function add(){
+	with(document){
+		
+var x1=getElementById("name").value;
+	if(x1.length==0||x1.length>15){
+		alert("name is must be 15 character.");	
+		return;
+		}		
+		
+		
+var x2=getElementById("email").value;
+	var i=x2.indexOf('@');
+	var j=x2.lastIndexOf('.');
+	if(i>0 && i<j-1){
+		alert("Valid email");
+	}else{
+		alert("Invalid email");
+		return;
+		}
+
+var x3=getElementById("Pword").value;
+	if(x3.length<=5){
+	alert("name is must be less 5 character.");	
+		return;	
+		
+		}
+var x4="";
+if(getElementById("reading").checked=true)
+x4+="Read";		
+	
+if(getElementById("writing").checked=true)
+x4+="Write";		
+	
+if(getElementById("playing").checked=true)
+ x4+="Play";	
+
+var x5=getElementById("gender").value;
+
+
+var x6=getElementById("country").value;		
+	
+	
+win.document.write("Your name is: "+x1+"<br>");
+win.document.write("Your email is: "+x2+"<br>");
+win.document.write("Your email is: "+x3+"<br>");
+win.document.write("Your hobby is: "+x4+"<br>");
+win.document.write("Your gendeer is: "+x5+"<br>");
+win.document.write("Your country is: "+x6+"<br>");
+
+	}
+		}
+	
+	
+</script>
+</head>
+
+
+<body>
+<form id="myForm">
+<pre>
+Name		:<input type="text" id="name" value="jakir hossain"><br>
+email		:<input type="text" id="email" value="jakirdc1@gmail.com"><br>
+email		:<input type="text" id="email" value="jakirdc1@gmail.com"><br>
+Password		:<input type="password" id="Pword" value="1234567"><br>
+
+Hobby		:
+                <input type="checkbox" id="reading">Read
+                <input type="checkbox" id="writing">Write
+                <input type="checkbox" id="playing">Play<br>
+Gender		:
+                <input type="radio" id="gender" value="male">Male
+                <input type="radio" id="gender" value="female">Feale<br>
+            
+Country		:
+ 			<select id="country">
+            	<option id="bangladesh">Bangladesh</option>
+                <option id="nepal">Nepal</option>
+                <option id="iran">Iran</option>
+                <option id="iraq">Iraq</option>
+            </select>
+</pre>
+
+</form>
+
+<button onClick="openWindow()">Open Window</button>
+<button onClick="add()">ADD</button>
+<button onClick="closeWindow()">Close Window</button>
+</body>
+</html>

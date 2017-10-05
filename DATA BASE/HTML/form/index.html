@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HTML FORM</title>
+<link rel="stylesheet" href="css/style.css"/>
+</head>
+
+<body>
+<div id="container"/>
+	<div id="header">Header</div>
+	<div id="content">
+		<div id="left">
+       	<a href="index.html">Home</a><br/>
+          <a href="form-in-div.html">Form In Div</a><br/>
+          <a href="form-in-table.html">Form in Table</a> 	<br/>
+          <a href="about.html">About</a><br/>
+          <a href="test.html">Test </a>
+        
+        </div>
+		<div id="right">
+        <h3>Html Form</h3>
+        <!--- form Starts here -->
+        <form action="#" method="post" >
+        	<label for="fullname">Full Name</label>
+        	<input type="text" name="fullname" id="fullname"/><br/>
+        
+        	<label for="age">Age</label>
+        	<input type="number" name="age" id="age"/><br/>
+            
+            <label for="email">Email</label>
+        	<input type="email" name="email" id="email"/><br/>
+            
+            <label for="password">Password</label>
+        	<input type="password" name="password" id="password"/><br/>
+            
+            <label for="hid">hidden</label>
+        	<input type="hidden" name="hid" id="hid"/><br/>
+            
+            <label for="dis">Disabled</label>
+        	<input type="text" disabled name="dis" id="dis"/><br/>
+            
+            <label for="file">File</label>
+        	<input type="file" name="file" id="file"/><br/>
+            
+            <label for="date">Date</label>
+        	<input type="date" name="date" id="date"/><br/>
+            
+            <label for="datetime">Date Time</label>
+        	<input type="datetime" name="datetime" id="datetime"/><br/>
+            
+            <label for="gender">Gender</label>
+        	<input type="radio" name="gender" id="gender" value="male"/>Male
+            <input type="radio" name="gender" id="gender" value="female"/>Female<br/>
+            <label for="hobby">Hobby</label>
+        	<input type="checkbox" name="hobby" id="hobby" value="reading"/>Reading
+            <input type="checkbox" name="hobby" id="hobby" value="writing"/>Writing<br/>
+            
+          <label for="country">Country</label>
+          <select name="country">
+          	<option>Select Country</option>
+          	<optgroup label="Assian Country">
+            	<option value="bd">Bangladesh</option>
+                <option value="nep">Nepal</option>
+          	</optgroup>
+            <optgroup label="European Country">
+            	<option value="uk">England</option>
+                <option value="bel">Belgium</option>
+          	</optgroup>
+          </select>  <br/>
+              
+           
+           <label for="message">Message</label>
+        	<textarea rows="3" cols="20" name="message" id="message" placeholder="Write Message Here"></textarea>
+            
+            <br/> 
+        
+          
+     		<label for="subscribe">Subscribe</label>
+        	<input type="checkbox" checked="checked" name="subscribe" id="subscribe"/><br/>  
+            
+            
+            <input type="submit" value="Save"/>       
+             <input type="reset" value="Reset"/>  
+        </form>
+        <!--- form ends here -->
+        </div>
+	</div>
+	<div id="footer">Footer</div>
+</div>
+</body>
+</html>

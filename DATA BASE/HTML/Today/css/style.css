@@ -1,0 +1,87 @@
+@@charset "utf-8";
+/* CSS Document */
+#container{
+	width:600px;
+	height:500px;
+	background:green;
+	margin:0 auto;
+	}
+#header{
+	width:600px;
+	height:100px;;
+	background:blue
+	}
+#logo{
+	width:100px;
+	height:100px;;
+	background:red;
+	float:left;
+	}
+#banner{
+	width:500px;
+	height:100px;;
+	background:wheat;
+	float:left;
+	}
+#content{
+	width:600px;
+	height:300px;
+	background:yellow;
+	}
+#leftcontent{
+	width:150px;
+	height:300px;
+	background:yellow;
+	float:left;
+	}
+#middlecontent{
+	width:300px;
+	height:300px;
+	background:purple;
+	float:left;
+	}
+#rightcontent{
+	width:150px;
+	height:300px;
+	background:yellow;
+	float:left;
+	}
+#uprightcontent{
+	width:150px;
+	height:100px;
+	background:red;
+	}
+#leftuprightcontent{
+	width:75px;
+	height:100px;
+	background:red;
+	float:left;
+	}
+#rightuprightcontent{
+	width:75px;
+	height:100px;
+	background:green;
+	float:left;
+	}
+#bottomrightcontent{
+	width:150px;
+	height:200px;
+	background:yellow;
+	}
+#footer{
+	width:600px;
+	height:100px;
+	background:blue;
+	}
+#leftfooter{
+	width:300px;
+	height:100px;
+	background:blue;
+	float:left;
+	}
+#rightfooter{
+	width:300px;
+	height:100px;
+	background:red;
+	float:left;
+	}

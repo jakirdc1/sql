@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>FACTORIAL</title>
+
+</head>
+
+<body>
+<script>
+function calfactorial(n){
+	if(n==0){
+		return 1;
+		
+		}else{
+			return n*calfactorial(n-1);
+			}
+	}
+var number=prompt("Enter a number : ","");
+document.write(calfactorial(number));
+</script>
+</body>
+</html>

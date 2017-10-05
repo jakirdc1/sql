@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+
+	<div class="box-num">
+    	<h3>Prime Number</h3>
+        <input type="text" id="input_num" placeholder="Enter a number">
+        <input type="button" id="trigger_fn" value="Show result">
+        <div id="show_result"></div>
+	</div>
+    
+	<div class="box-num">
+    	<h3>Factorial</h3>
+        <input type="text" id="input_factorial" placeholder="Enter a number">
+        <input type="button" id="trigger_fac" value="Show result">
+        <div id="show_factorial"></div>
+	</div>
+        
+	<div class="box-num">
+    	<h3>Total Sum</h3>
+        <input type="text" id="f_num" placeholder="Enter first number">
+        <input type="text" id="l_num" placeholder="Enter last number">
+        <input type="button" id="trigger_num" value="Show result">
+        <div id="show_num"></div>
+	</div>
+    
+<script>
+	function isPrime(n){
+		var num = Math.sqrt(n);
+		for(var i=2;i<=num;i++){
+			if(n%i==0){
+				return false;	
+			}	
+		}
+		return true;	
+	}
+	function triggerFunction(){
+		var enterNum = document.getElementById("input_num").value;
+		if(enterNum==0||enterNum==1){
+			document.getElementById("show_result").innerHTML= enterNum + " number is not prime."	
+		}else{
+			if(isPrime(enterNum)){
+				document.getElementById("show_result").innerHTML= enterNum + " number is prime."	
+			}else{
+				document.getElementById("show_result").innerHTML= enterNum + " number is not prime."		
+			}
+		}
+	}
+	document.getElementById("trigger_fn").onclick = function(){
+		triggerFunction();	
+	};
+	
+	
+	
+	function factorial(n){
+		if(n==0){
+			return 1;	
+		}else{
+			return n*factorial(n-1);	
+		}
+	}
+	function triggerFac(){
+		var enterNum = document.getElementById("input_factorial").value;
+		
+		document.getElementById("show_factorial").innerHTML= factorial(enterNum);
+	}
+	document.getElementById("trigger_fac").onclick = function(){
+		triggerFac();	
+	};
+	
+	
+	function totalSum(a,b){
+		var a=parseInt(a),b=parseInt(b),total=0;
+		for(a;a<=b;a++){
+			total+=a	
+		}
+		return total;
+		
+	}
+	function triggerSum(){
+		var fNum = document.getElementById("f_num").value;
+		var lNum = document.getElementById("l_num").value;
+		
+		document.getElementById("show_num").innerHTML= totalSum(fNum,lNum);
+	}
+	document.getElementById("trigger_num").onclick = function(){
+		triggerSum();	
+	};
+	
+</script>
+
+</body>
+</html>

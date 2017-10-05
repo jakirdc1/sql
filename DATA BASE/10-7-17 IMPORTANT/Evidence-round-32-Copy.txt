@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Js evidence Round-33</title>
+<script type="text/javascript">
+var win="";
+function winOpen(){
+	win=open("","con","height=500, width=300");
+	win.document.write("<h1> IDB-BISEW</h1>");
+	win.document.write("<h3> ROUND-32</h3>");
+	win.document.write("<table border=2>");
+	
+	}
+	
+function winClose(){
+	win.close();
+	}
+function winWrite(){
+	var uname=document.getElementById("uname").value;
+	if(uname.length<5){
+		alert("type at least 6 charecter");
+		return;
+	}
+	var pwd=document.getElementById("pwd").value;
+	if(pwd.length<7){
+		alert("type at least 8 charecter");
+		return;
+		}
+	var email=document.getElementById("email").value;
+	var atpos=email.indexOf("@");
+	var dotpos=email.lastIndexOf(".");
+	if(atpos>0 && dotpos<email.length && atpos<dotpos-1){
+	alert("valid Email");
+	}
+	else{
+	alert("invalid Email");
+		}
+		
+	 var gender=document.getElementById("gender").checked==true?"male":"female";
+	 
+	 var hobby=document.getElementById("reading").checked==true?"reading":"";
+	 hobby+=document.getElementById("writing").checked==true?"writing":"";
+//	 hobby+=document.getElementById("danching").checked==true?"danching":"";
+	  
+	 var division=document.getElementById("division");
+	 var index=division.selectedIndex;
+	 var value=division.options[index].value;
+	  
+	  }
+	  
+	  win.document.write("<tr>");
+      win.document.write("<td>"+uname+"</td>");
+      win.document.write("<td>"+pwd+"</td>");
+      win.document.write("<td>"+email+"</td>");
+      win.document.write("<td>"+gender+"</td>");
+      win.document.write("<td>"+hobby+"</td>");
+      win.document.write("<td>"+value+"</td>");
+      win.document.write("</tr>");
+
+</script>
+</head>
+
+<body>
+    <pre>
+    <form>
+    Name <input type="text" name="uname" id="uname" />
+    
+    password<input type="password" name="pwd" id="pwd" />
+    
+    Email <input type="text" name="email" id="email" />
+    
+    Gender<input type="radio" name="male" checked id="gender" />male<input type="radio" name="male" id="gender" />female
+    
+    Hobby <input type="checkbox" id="reading" />reading<input type="checkbox" id="writing" />reading<input type="checkbox"
+     	  id= "danching" />danching
+    
+    <input type="button" value="OPEN" onclick="winOpen()" />
+    <input type="button" value="Close" onclick="winClose()" />
+    <input type="button" value="write" onclick="winWrite()" />
+    
+    Division <select id="division">
+    <option value="Dhaka">Dhaka</option>
+    <option value="syleth">syleth</option>
+    <option value="borishal">borishal</option>
+    </select>
+    
+    </form>
+    </pre>
+    
+
+       
+
+</body>
+</html>

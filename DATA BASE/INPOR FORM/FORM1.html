@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script type="text/javascript">
+
+	
+	
+var win;
+
+function winOpen(){
+	win=window.open(" ", " ", "width=500 height=300");
+	win.document.write("<center>window output</center>")
+	}
+function winClose(){
+	
+	win.Close();
+	
+	}
+	
+	
+function add(){
+	with(document){
+		
+		
+//for name
+
+var	stname=getElementById("stname").value;
+if(stname.length==0 || stname.length>10){
+	alert("name must be 1 to 10 character");
+	return;
+	}
+	
+//var	id=getElementById("id").value;
+
+//for email
+var	email=getElementById("email").value;
+var i=email.indexOf('@');	
+var j=email.lastIndexOf('.');	
+if (i>0 && i<j-1){
+	alert("valid Email");
+	}else{
+	alert("Invalid email");
+	return;	
+		}
+
+//for password
+
+var pword=getElementById("pword").value;
+if(pword.length<=5){
+	alert("password must be less 5 character");
+	return;	
+	}
+//for hobby
+
+var hobby="";
+
+if(getElementById("reading").checked==true){
+hobby+=getElementById("reading").value;	
+}
+if(getElementById("writing").checked==true){
+hobby+=getElementById("writing").value;
+}
+if(getElementById("playing").checked==true){
+hobby+=getElementById("playing").value;
+}
+//for division
+var division=getElementById("division").value;
+
+var course="";
+if(getElementById("good").checked==true)
+course+="GOOD";
+
+if(getElementById("java").checked==true)
+course+="JAVA";
+
+if(getElementById("wpsi").checked==true)
+course+="WPSI";
+win.document.write(stname+" "+email+" "+hobby+" "+course+" "+division);
+		}
+	}
+
+</script>
+
+
+	
+</head>
+<body>
+<form name="f">
+<pre>
+Name   : <input type="text" id="stname"/>
+
+<!--Id     : <input type="text" id="id"/>-->
+
+E-mail : <input type="text" id="email"/>
+
+Password : <input type="password" id="pword"/>
+
+Hobby:
+		
+        Read<input type="checkbox" id="reading" value="Read"/>
+        
+       Write<input type="checkbox" id="writing" value="Write"/>
+       
+     Playing<input type="checkbox" id="playing" value="Playing"/>
+
+Division:
+	
+    <select id="division">
+    	<option value="Dhaka">Dhaka</option>
+        <option value="Bogra">Bogra</option>
+        <option value="Rajshahi">Rajshahi</option>
+        <option value="Khulna">Khulna</option>
+        <option value="Cumilla">Cumilla</option>
+        <option value="Chittagonj">Chittagonj</option>
+    </select>
+       
+Course :
+		
+        <input type="radio" name="course" id="good" value="good"/>GOOD
+        
+        <input type="radio" name="course" id="java" value="java"/>JAVA
+        
+        <input type="radio" name="course" id="wpsi" value="wpsi"/>WPSI
+        
+        
+</pre>
+
+</form>
+
+<input type="button" value="open" onClick="winOpen()"/><input name="button2" type="button" value="Write" /><input name="button3" type="button" value="Add" onClick="add()"/><input type="button" value="Close" onClick="winClose()"/>
+
+
+
+
+
+</body>
+</html>

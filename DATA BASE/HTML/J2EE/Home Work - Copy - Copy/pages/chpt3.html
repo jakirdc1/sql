@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sh@mim</title>
+<meta http-equiv="Content-Type" content="text/html; charset="utf-8" />
+<link href="../style.css" rel="stylesheet" type="text/css"/>
+
+</head>
+<body>
+<div id="banner"> 
+</div>
+<div id="container">
+  <div id="nav">
+    <ul>
+      <li><a href="../index.html"><b>HOME</b></a></li>
+      <li ><a href="gallery.html"><b>GALLERY</b></a></li>
+      <li><a href="chpt1.html"><b>CHPT-1</b></a></li>
+      <li><a href="chpt2.html"><b>CHPT-2</b></a></li>
+      <li class="current"><a href="chpt3.html"><b>CHPT-3</b></a></li>
+      <li><a href="chpt4.html"><b>CHPT-4</b></a></li>
+	  <li><a href="chpt7.html"><b>CHPT-7</b></a></li>
+	  <li><a href="notice.html"><b>NOTICE</b></a></li>
+    </ul>
+  </div>
+  <div id="content">
+	<h2 id="cht3" align="center">CHAPTER THREE</h2>
+			<h3 align="center">Demonstrate Understanding Of The Main Features Of Structured Programming </h3><hr>
+			<dl>
+				<dt>Question: What is the comparison of value?</dt>
+				<dd><span class="answer">Answer:</span> The comparison of two values is represented in a program flowchart by the decision outline. In structured programming, the condition in an IF-THEN-ELSE instruction usually consists of a comparison of two values; the condition in a DO WHILE instruction may also be such a comparison.</dd><br>
+				<dt>Question: What is combining conditions? </dt>
+				<dd><span class="answer">Answer:</span> We are often confronted (challenged) with situations in which we must test more than one condition before we can select the correct course of action. In that situation we use different combinations of conditions to solve that confront which is called combining conditions. </dd><br />
+				<dt>Question: What is Pseudocode?</dt>
+				<dd><span class="answer">Answer:</span> Pseudocode is an artificial and informal language that helps programmers develops algorithms. Pseudocode is a "text-based" detail (algorithmic) design tool for structured programming.</dd><br />
+				<dt>Question: How do we represent the logic for a simple sorting problem in pseudocode? </dt>
+				<dd><span class="answer">Answer:</span> Suppose, X and Y are two variables where X may be larger than Y or Y may be larger than X. Now we have to write a pseudocode which can do sorting the two variables properly. </dd><br />
+				<pre><code>
+		IF X < Y THEN
+			move X to TEMP
+			move Y to X
+			move TEMP to Y
+		ELSE
+			(null)
+		END IF
+</code></pre>
+				<dt>Question: Write down some looping structure.</dt>
+				<dd><span class="answer">Answer:</span> 
+				<pre><code>
+<i>while</i> loop structure: 
+		while(condition)
+			{
+			conditional code;
+			}
+
+<i>for</i> loop structure: 
+		for(init; condition; update)
+			{
+			conditional code;
+			}	
+		[N.B. update means increment or decrement]
+			
+<i>do while</i> loop structure: 
+		do
+			{
+			conditional code;
+			}while(condition)				
+				
+				</code></pre>
+				
+				</dd><br />
+				<dt> Question: What do you mean by sorting?</dt>
+				<dd><span class="answer">Answer:</span>In computer science, arranging in an ordered sequence is called sorting. The most common uses of sorted sequences are:
+				<ol>
+					<li>making lookup or search efficient</li>
+					<li>making merging of sequences efficient</li>
+					<li>enable processing of data in a defined order</li>
+				</ol>
+				</dd><br />
+				<dt>Question: What is combining conditions?</dt>
+				<dd><span class="answer">Answer:</span>We are often confronted (challenged) with situations in which we must test more than one condition before we can select the correct course of action. In that situation we use different combinations of conditions to solve that confront which is called combining conditions. </dd><br />
+				<dt>Question: What is Boolean algebra and what is the use of it?</dt>
+				<dd><span class="answer">Answer:</span>Boolean algebra a form of algebra in which symbols have the values of either <q>true</q> or <q>false</q> and are subject to the operations AND, OR, and NOT (also known as Boolean logic). In computer programming the Boolean algebra is used to define every event within two expressions. </dd><br />
+				<dt>Question: What do you mean by truth table?</dt>
+				<dd><span class="answer">Answer:</span>The truth table is commonly used to represent the possible values of combinations of conditions. There are four rules which can make any kind of truth table. 
+				<ol type="a">
+					<li>The expression A AND B is true if A is true and B is true.</li>
+					<li>The expression A OR B is true if A is true or B is true or both are true.</li>
+					<li>If A is true, then NOT A is false.</li>
+					<li>If A is false, then NOT A is true.</li>
+				</ol>
+				
+				</dd><br />
+				<dt>Question: What do you mean by order of comparison or precedence?</dt>
+				<dd><span class="answer">Answer:</span>A order of comparison is a type of sorting algorithm that only reads the list elements through a single abstract comparison operation (often a "less than or equal to" operator) that determines which of two elements should occur first in the final sorted list.</dd><br />
+				<dt>Question: What is input editing?</dt>
+				<dd><span class="answer">Answer:</span>A programmer designing a program that will process data being entered into the computer for the first time must be aware of the necessity for editing the data. So input editing is a processing that checks the validity of data. There are some of the more widely used techniques for input editing:
+				<ol type="i">
+					<li>Sequence checking</li>
+					<li>Restricted-value test</li>
+					<li>Miscellaneous other tests</li>
+				</ol>
+				
+				</dd><br />
+				<dt>Question: What is sequence checking?</dt>
+				<dd><span class="answer">Answer:</span>Sequence checking is a method for verifying that a file is in order by comparing key fields of consecutive records. </dd><br />
+				<dt>Question: What is restricted-value test?</dt>
+				<dd><span class="answer">Answer:</span>Restricted-value test is a test applied to an input field to determine if its value is acceptable, as for example within a range of values.</dd><br />
+				<dt>Question: What is miscellaneous other tests?</dt>
+				<dd><span class="answer">Answer:</span>Depending on the situation, any of a number of other tests may be performed on input data, which is called miscellaneous other tests. </dd><br />
+				<dt>Question: What do you mean by error routine?</dt>
+				<dd><span class="answer">Answer:</span>Error routine is some instructions that are executed when an error is encountered during processing. </dd><br />
+				<dt>Question: What are the end-of-file checking techniques?</dt>
+				<dd><span class="answer">Answer:</span>End-of-file is a name of condition when the data is finished to read. The computer will signal an end-of-file condition when it occurs. If this technique is not available or not appropriate in computer then the programmer must be prepared end-of-file checking techniques. Two other techniques can be used to detect the end-of-file condition. They are: 
+				<ol type="(i)">
+					<li>Sentinel value and</li>
+					<li>A counter</li>
+				</ol>
+				</dd><br />
+				<dt>Question: What is sentinel value for the end-of-file checking techniques?</dt>
+				<dd><span class="answer">Answer:</span>Sentinel value is a specific value placed in a field in a dummy record to signal the end-of-file. </dd><br />
+				<dt>Question: What is counter for the end-of-file checking techniques?</dt>
+				<dd><span class="answer">Answer:</span>The program has to maintain a count of the number of records that are read and processed; when the count of the number of records processed equals the number expected, the processing of data records stops. </dd><br />
+				
+			</dl>
+			
+			
+			
+			
+  
+  </div>
+  <div id="footer">&copy 2017 | Md. Shamim Sarker | IDB-BISEW ROUND-33 | All Rights Reserved </div>
+</div>
+</body>
+</html>

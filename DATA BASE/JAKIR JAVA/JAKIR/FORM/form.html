@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+  <meta charset="UTF-8">
+  <script>
+  function displayFormData(){
+	  var fn=document.forms['myForm']['fname'].value;
+	   var ln=document.forms['myForm']['lname'].value;
+	  var fullName=fn+" "+ln;
+	 document.getElementById('demo').innerHTML=fullName;
+	 //for gender
+	 var gender=document.forms['myForm']['gender'].value;
+	 document.getElementById('demogender').innerHTML=gender;
+	
+	  
+	  //for hobby
+	  
+	  var hobbies=document.forms[0];
+	  var hob="";
+	  for(i=0; i<hobbies.length; i++){
+		  if(hobbies[i].checked){
+			  hob=hob+hobbies[i].value+", ";
+		 	 }
+	  	}
+		 document.getElementById('demohobby').innerHTML=hob;
+		 
+		 //for masseages
+	 var masseages=document.forms['myForm']['masseages'].value;
+	 document.getElementById('mag').innerHTML=masseages;
+	 
+		 
+		  //for country
+	 var country=document.forms['myForm']['country'].value;
+	 document.getElementById('democountry').innerHTML=country;
+	 
+		 
+
+ //for email
+	 var email=document.forms['myForm']['email'].value;
+	 document.getElementById('demoemail').innerHTML=email;
+	 
+	
+	 
+	 
+	 
+	 
+	 
+	 
+	  }
+  
+  </script>
+   </head>
+<body>
+ <form name="myForm">
+ <fieldset>
+ <legend>Form Registration</legend>
+ First name:<input type="text" id="fname"/>
+ Last name:<input type="text" id="lname"/><br/>
+  
+ Gender:
+ <input type="radio" name="gender" value="male"/>Male
+ <input type="radio" name="gender" value="female"/>Female
+ <input type="radio" name="gender" value="others"/>Others<br/>
+ 
+ 
+  Hobby:
+ <input type="checkbox" name="hobby" value="reading"/>reading
+ <input type="checkbox" name="hobby" value="play"/>play
+ <input type="checkbox" name="hobby" value="sing"/>sing<br/>
+ Messeages:
+<textarea style="masseages"></textarea><br/>
+ 
+ Country:
+ <select name="country">
+ <option value="bd">Bangladesh</option>
+ <option value="en">England</option>
+ <option value="pk">Pakistan</option>
+ <option value="ne">Nepal</option>
+ 
+ </select><br/>
+ 
+ 
+ 
+ Email:
+ <input type="email" name="email"><br/>
+ 
+ </fieldset>
+ 
+ 
+  </form>
+  
+  
+  	<button type="reset" value="reset">Clear</button>
+    <button type="submit" onClick="displayFormData()">submit</button><br/>
+Name: <p id="demo"></p>
+
+Gender: <p id="demogender"></p>
+
+Hobby: <p id="demohobby"></p>
+
+Email: <p id="demoemail"></p>
+Country:<p id="democountry"></p>
+
+Masseages:<p id="mag"></p>
+
+
+
+
+
+
+  
+</body>
+</html>

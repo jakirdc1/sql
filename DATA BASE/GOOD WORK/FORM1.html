@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Form</title>
+<script> 
+var win;
+function openWindow(){
+win=window.open("", "", "width=600");
+win.document.write("<center><h1>Output Window</h1></center>");
+
+}
+
+function add(){
+ with(document){
+var x2=getElementById("name").value;
+if(x2.length==0 || x2.length>15){
+	alert("Name is must be 1 to 15 character.");
+	
+	}	 
+
+var x3=getElementById("number").value;	
+ 
+	 
+var x1=getElementById("email").value;
+var i=x1.indexOf('@');	 
+var j=x1.lastIndexOf('.');	 
+	if(i>0 && i<j-1){
+	alert("valid is email");	
+		
+		}else{
+			
+	alert("Invalid is email");		
+			return;
+			} 
+			
+
+var x4=getElementById("pword").value;	
+ 
+	if(x4.length<=5){
+		
+	alert("password is must be  greater than 5 character.");	
+		}
+		
+		
+var x5="";
+if(getElementById("reading").checked)
+x5+="Read";
+
+if(getElementById("Playing").checked)
+x5+="Play";
+
+
+var x6=getElementById("gender").value;	
+
+
+var x7=getElementById("country").value;	
+
+
+
+	
+win.document.write("your email is: "+x1+"<br/>");
+win.document.write("your name is: "+x2+"<br/>");
+win.document.write("your id is: "+x3+"<br/>");
+win.document.write("your password is: "+x4+"<br/>");
+win.document.write("your hobby is: "+x5+"<br/>");
+win.document.write("your gender is: "+x6+"<br/>");
+win.document.write("your country is: "+x7+"<br/>");	
+ 
+	 }
+}
+
+
+</script>
+
+</head>
+
+<body>
+<form>
+
+Name:
+<input type="text" id="name"><br/>
+
+Email:
+
+<input type="text" id="email"><br/>
+
+Id:
+<input type="text" id="number"><br/>
+
+
+Password:
+<input type="password" id="pword"><br/>
+
+Hobby:
+
+<input type="checkbox" id="reading">Read
+<input type="checkbox" id="Playing">Play<br/>
+
+Gender:
+
+<input type="radio" id="gender" value="male">Male
+<input type="radio" id="gender" value="female">Male<br/>
+
+Country:
+<select id="country">
+<option id="Bangladesh">Bangladesh</option>
+<option id="Pakistan">Pakistan</option>
+
+<option id="Nepal">Nepal</option>
+
+
+</select>
+
+
+</form>
+
+
+
+
+<button onClick="openWindow()">Open window</button>
+<button onClick="add()">Add</button>
+<button onClick="closeWindow()">close Window</button>
+
+
+</body>
+</html>

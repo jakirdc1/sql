@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+  <meta charset="UTF-8">
+  <title>js Form</title>
+  <script>
+  function displayFormData(){
+	  var fn=document.forms['myForm']['fname'].value;
+	  var ln=document.forms['myForm']['lname'].value;
+	  var fullName=fn+" "+ln;
+	 document.getElementById('demo').innerHTML=fullName;
+	 //For gender
+	 var gender=document.forms['myForm']['gender'].value;
+	  document.getElementById('demoGender').innerHTML=gender;
+	  
+	  //For CheckBox
+	  var hobbies=document.forms[0];
+	  var hob="";
+	  for(i=0; i<hobbies.length; i++){
+		  if(hobbies[i].checked){
+			  hob=hob+hobbies[i].value+", ";
+			  }
+		  }
+		  document.getElementById('demoHobby').innerHTML=hob;
+		  //Select Box
+		  //Textarea
+	  var country=document.forms['myForm']['country'].value;
+	  document.getElementById('demoCountry').innerHTML=country;
+	  
+	  
+		  //Textarea
+		   var msg=document.forms['myForm']['msg'].value;
+	  document.getElementById('demoMsg').innerHTML=msg;
+	  
+	  
+	 }  
+  </script>
+   </head>
+<body>
+ <form name="myForm">
+ First name:<input type="text" name="fname" />
+ Last name:<input type="text" name="lname"/>
+  Gender:
+ <input type="radio" name="gender" value="male"/>Male
+ <input type="radio" name="gender" value="female"/>Female
+ <input type="radio" name="gender" value="Unknown"/>Unknown
+  
+  Hobby:
+ <input type="checkbox" name="hobby" value="reading"/>reading
+ <input type="checkbox" name="hobby" value="writing"/>writing
+ <input type="checkbox" name="hobby" value="playing"/>playing
+ Country:
+ 
+ <select name="country">
+ <option>Select Country</option>
+ <option value="bd">Bangladesh</option>
+  <option value="in">India</option>
+   <option value="nep">Nepal</option>
+ </select>
+ 
+ 
+ 
+ <textarea name="msg"></textarea>
+ 
+ </form>   
+  <button type="submit" onClick="displayFormData()">Send.....</button>
+Name: <p id="demo"></p>
+Gender: <p id="demoGender"></p>
+Hobby: <p id="demoHobby"></p>
+Msg: <p id="demoMsg"></p>
+Country: <p id="demoCountry"></p>
+</body>
+</html>
